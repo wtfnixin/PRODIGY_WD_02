@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-image: url('codioful-formerly-gradienta-LeG68PrXA6Y-unsplash.jpg');
+    background-size: cover;
+}
+
+.container{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.time {
+    font-size: 2rem;
+    margin: 0;
+}
+
+h1 , p {
+      color: #110c0c;
+     
+    }
+    
+h1{
+    font-family: "alegreya-sc";
+    font-weight:400;
+    font-style:normal;
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+}
+h1:hover{
+    transform: translateY(-3px);
+}
+button {
+  background-color: #f3f7fe;
+  color: #3b82f6;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 80px;
+  height: 45px;
+  transition: all 0.3s ease;
+  padding: 10px 10px;
+  margin-top: auto;
+  justify-content: space-between;
+  
+}
+
+button:hover {
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+  color: #fff;
+}
+.container .btn{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+#minutes, #seconds, #tens {
+    
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+    display: inline-block;
+}
+#minutes:hover {
+    transform: translateY(-5px);
+}
+#seconds:hover {
+    transform: translateY(-5px);
+}
+#tens:hover {
+    transform: translateY(-5px);
+}
