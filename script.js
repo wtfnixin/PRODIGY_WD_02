@@ -1,13 +1,16 @@
 window.onload = function () {
   let minutes = 0;
   let seconds = 0;
-  let tens = 00;
+  let tens = 0;
   let appendMinutes = document.querySelector("#minutes");
   let appendTens = document.querySelector("#tens");
   let appendSeconds = document.querySelector("#seconds");
   let startBtn = document.querySelector("#start");
   let stopBtn = document.querySelector("#stop");
   let resetBtn = document.querySelector("#reset");
+  let lapBtn = document.querySelector("#lap");
+  let lapTimes = document.querySelector("#lapTimes");
+  let laps = [];
   let Interval;
 
   const startTimer = () => {
@@ -49,11 +52,19 @@ window.onload = function () {
 
   resetBtn.onclick = () => {
     clearInterval(Interval);
-    tens = "00";
-    seconds = "00";
-    minutes = "00";
-    appendTens.innerHTML = tens;
-    appendSeconds.innerHTML = seconds;
-    appendMinutes.innerHMTL = minutes;
+    tens = 0;
+    seconds = 0;
+    minutes = 0;
+    appendTens.innerHTML = "00";
+    appendSeconds.innerHTML = "00";
+    appendMinutes.innerHTML = "00";
+    laps = [];
+    lapTimes.innerHTML = "";
+  };
+
+  lapBtn.onclick = () => {
+    let lapTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${tens.toString().padStart(2, '0')}`;
+    laps.push(lapTime);
+    lapTimes.innerHTML += `<p>Lap ${laps.length}: ${lapTime}</p>`;
   };
 };
